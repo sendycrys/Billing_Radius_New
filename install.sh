@@ -13,6 +13,12 @@ fi
 echo "1. Memperbarui sistem..."
 apt update && apt upgrade -y
 
+# Instal curl jika belum ada
+if ! command -v curl &> /dev/null; then
+    echo "Menginstal curl..."
+    apt install -y curl
+fi
+
 # Instal Docker & Docker Compose jika belum ada
 if ! command -v docker &> /dev/null; then
     echo "2. Menginstal Docker..."
