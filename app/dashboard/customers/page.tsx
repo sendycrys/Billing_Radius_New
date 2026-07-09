@@ -10,6 +10,8 @@ import {
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
+export const dynamic = "force-dynamic"
+
 export default async function CustomersPage() {
   const customers = await prisma.customer.findMany({
     orderBy: { createdAt: 'desc' }
