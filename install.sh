@@ -43,7 +43,7 @@ echo "5. Menunggu database PostgreSQL siap..."
 sleep 10
 
 echo "6. Menjalankan migrasi database..."
-docker compose exec -T app npx prisma migrate deploy
+docker compose exec -T app npx prisma@6 migrate deploy
 
 echo "======================================"
 echo "Instalasi Selesai!"

@@ -21,6 +21,7 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 COPY --from=builder /app/public ./public
+COPY --from=builder /app/prisma ./prisma
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder /app/.next/standalone ./
