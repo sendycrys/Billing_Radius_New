@@ -31,6 +31,7 @@ export function AppSidebar() {
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
+                  {/* @ts-expect-error asChild is missing from types but works with Radix Slot */}
                   <SidebarMenuButton asChild>
                     <Link href={item.url}>
                       <item.icon />
